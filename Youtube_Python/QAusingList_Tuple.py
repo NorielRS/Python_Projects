@@ -1,0 +1,23 @@
+import random
+randomQUESTIONS = []
+QUESTIONS = [
+    ("When was the first known use of the word 'quiz'", "1781"),
+    ("Which built-in function can get information from the user", "input"),
+    ("Which keyword do you use to loop over a given list of elements", "for")
+]
+
+randNum = random.randint(0, len(QUESTIONS) - 1)
+
+randomQUESTIONS.append(QUESTIONS[randNum])
+
+print(randomQUESTIONS)
+
+for question, a in randomQUESTIONS:
+    print(f"{question}? ")
+    print(f'{a}')
+
+    
+    # if answer == correct_answer:
+    #     print("Correct!")
+    # else:
+    #     print(f"The answer is {correct_answer!r}, not {answer!r}")
