@@ -1,29 +1,19 @@
 def find_highest(given_list):
-    print(len(given_list))
+    if len(given_list) == 1:
+        return given_list[0]
+    else:
+        m = find_highest(given_list[1:])
+        return m if m > given_list[0] else given_list[0]
+
+def recursive_max(a):
+    if len(a) ==1:
+        return a[0]
+    else:
+        return a[0] if a[0] > recursive_max(a[1:]) else recursive_max(a[1:])
 
 
-
-    # i = 1
-    # highest = given_list[0]
-
-
-    # if len(given_list)>0:
-    #     return 
-
-    # if highest > given_list[i]:
-    #     print(highest)
-    # else:
-    #     i+1
-    #     return find_highest(given_list)
-
-
-
-
-
-
-
-
-find_highest([0, 12, 4, 87])
+print('recursive max is ',recursive_max([0, 12, 4, 87]))
+print('find highest is',find_highest([0, 12, 4, 87]))
 
 
 
